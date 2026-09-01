@@ -2934,7 +2934,7 @@ body.is-touch .tiles article .content {
 }
 
 #header .logo {
-  display: block;
+  display: inline-flex;
   border-bottom: 0;
   color: inherit;
   font-weight: 900;
@@ -2942,7 +2942,6 @@ body.is-touch .tiles article .content {
   margin: 0 0 2.5em 0;
   text-decoration: none;
   text-transform: uppercase;
-  display: flex;
 }
 
 #header .logo > * {
