@@ -1,29 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
+    <title>Contact | Raj Patel</title>
     <meta charset="utf-8" />
-    <title>Snake Game</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="/snake/snake.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
-      ><link rel="stylesheet" href="/assets/css/noscript.css"
+      ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
-    
-    <body class="is-preload">
-        <!-- Wrapper -->
-        <div id="wrapper">
-          <header id="header">
-            <div class="inner">
-              <!-- Logo -->
-              <a href="../index.html" class="logo">
-                <span class="symbol"><img src="/images/logo.png" alt="" /></span>
-              </a>
-              <!-- Nav -->
-               <nav id="menu">
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="logo">
+            <span class="symbol"><img src="images/logo.png" alt="" /></span>
+          </a>
+          <nav>
+            <ul>
+              <li><a href="#menu">Menu</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <nav id="menu">
         <h2>Menu</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -32,116 +36,84 @@
           <li><a href="maintenance.html">Contact</a></li>
         </ul>
       </nav>
-            </div>
-          </header>
-    
-          <!-- Menu -->
-          <!--<nav id="menu">
-            <h2>Menu</h2>
-            <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/generic.html">Tempus etiam</a></li>
-              <li><a href="/generic.html">Consequat dolor</a></li>
-              <li><a href="/elements.html">Elements</a></li>
-              <li><a href="/generic.html">Ipsum veroeros</a></li>
-            </ul>
-          </nav>
-    
-          <!-- Main -->
-          <div id="main">
-            <div class="inner">
-              <h1 class="projecttitle">This page is coming soon. In the meantime, enjoy this game.</h1>
-          <div id="game">    
-         <!--Game-->
-          <div class="snake-wrapper">
-            <div class="game-details">
-              <span class="score">Score: 0</span>
-              <span class="high-score">High Score: 0</span>
-            </div>
-            <div class="play-board"></div>
-            <div class="controls">
-              <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
-              <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
-              <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
-              <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
-            </div>
-          </div>
-            </div>
 
-            <span class="projectback"><a href="/index.html">&#8592;</a></span>
-          </div>
+      <div id="main">
+        <div class="inner">
+          <h1>This page is coming soon</h1>
+          <p>
+            In the meantime, use the form below to get in touch — I'll get
+            back to you as soon as I can.
+          </p>
         </div>
+      </div>
 
-          <!-- Footer -->
-          <footer id="footer">
-            <div class="inner">
-              <section>
-                <h2>Get in touch</h2>
-                <form method="post" action="https://formspree.io/f/xjyvyyel">
-                  <div class="fields">
-                    <div class="field half">
-                      <input type="text" name="name" id="name" placeholder="Name" />
-                    </div>
-                    <div class="field half">
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email"
-                      />
-                    </div>
-                    <div class="field">
-                      <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Message"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <ul class="actions">
-                    <li><input type="submit" value="Send" class="primary" /></li>
-                  </ul>
-                  <p class="form-status" role="status" aria-live="polite" hidden></p>
-                </form>
-              </section>
-              <section>
-                <h2>Follow</h2>
-                <ul class="icons">
-                  <li>
-                    <a href="#" class="icon brands style2 fa-linkedin-in"
-                      ><span class="label">LinkedIn</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="icon brands style2 fa-github"
-                      ><span class="label">GitHub</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="icon brands style2 fa-instagram"
-                      ><span class="label">Instagram</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="icon brands style2 fa-facebook-f"
-                      ><span class="label">Facebook</span></a
-                    >
-                  </li>
-                </ul>
-              </section>
-              <ul class="copyright">
-                <li>&copy; Raj Patel. All rights reserved</li>
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in touch</h2>
+            <form method="post" action="https://formspree.io/f/xjyvyyel">
+              <div class="fields">
+                <div class="field half">
+                  <input type="text" name="name" id="name" placeholder="Name" />
+                </div>
+                <div class="field half">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="field">
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li><input type="submit" value="Send" class="primary" /></li>
               </ul>
-            </div>
-          </footer>
+              <p class="form-status" role="status" aria-live="polite" hidden></p>
+            </form>
+          </section>
+          <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+              <li>
+                <a href="#" class="icon brands style2 fa-linkedin-in"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon brands style2 fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon brands style2 fa-instagram"
+                  ><span class="label">Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon brands style2 fa-facebook-f"
+                  ><span class="label">Facebook</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <ul class="copyright">
+            <li>&copy; Raj Patel. All rights reserved</li>
+          </ul>
         </div>
-    
-        <!-- Scripts -->
-        <script src="/assets/js/jquery.min.js"></script>
-        <script src="/assets/js/browser.min.js"></script>
-        <script src="/assets/js/breakpoints.min.js"></script>
-        <script src="/assets/js/util.js"></script>
-        <script src="/assets/js/main.js"></script>
-        <script src="snake/snake.js"></script>
-      </body>
+      </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
