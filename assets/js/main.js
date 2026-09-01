@@ -163,14 +163,17 @@ if (photoGrid) {
 
 document.querySelectorAll('form[action*="formspree.io"]').forEach((form) => {
   const status = form.querySelector(".form-status");
+  const fields = form.querySelector(".fields");
+  const actions = form.querySelector(".actions");
   const submitButton = form.querySelector('input[type="submit"]');
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     if (status) {
-      status.textContent = "Sending...";
+      status.textContent = "";
       status.classList.remove("success", "error");
+      status.hidden = true;
     }
     if (submitButton) submitButton.disabled = true;
 
@@ -181,16 +184,20 @@ document.querySelectorAll('form[action*="formspree.io"]').forEach((form) => {
     })
       .then((response) => {
         if (response.ok) {
-          if (status) {
-            status.textContent = "Message sent — thanks for reaching out!";
-            status.classList.add("success");
-          }
           form.reset();
+          if (fields) fields.style.display = "none";
+          if (actions) actions.style.display = "none";
+          if (status) {
+            status.textContent = "Message sent";
+            status.classList.add("success");
+            status.hidden = false;
+          }
         } else {
           if (status) {
             status.textContent =
               "Something went wrong. Please try again or email me directly.";
             status.classList.add("error");
+            status.hidden = false;
           }
         }
       })
@@ -199,6 +206,7 @@ document.querySelectorAll('form[action*="formspree.io"]').forEach((form) => {
           status.textContent =
             "Something went wrong. Please try again or email me directly.";
           status.classList.add("error");
+          status.hidden = false;
         }
       })
       .finally(() => {
