@@ -3520,13 +3520,37 @@ h2 .projects {
 .form-status {
   margin-top: 1em;
   font-size: 0.9rem;
-  min-height: 1.2em;
-}
-
-.form-status.success {
-  color: #2e8b57;
 }
 
 .form-status.error {
   color: #c0392b;
+}
+
+.form-status.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  margin: 0;
+  padding: 2.5em 1.5em;
+  border: 2px solid #2e8b57;
+  border-radius: 6px;
+  background: rgba(46, 139, 87, 0.08);
+  color: #2e8b57;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-status.success::before {
+  content: "\2713";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: #2e8b57;
+  color: #fff;
+  font-size: 1rem;
 }
