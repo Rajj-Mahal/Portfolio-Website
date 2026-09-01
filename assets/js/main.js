@@ -142,86 +142,21 @@
     });
 })(jQuery);
 
-const images = [
-  {
-    src: "../images/photos/photo2.jpg",
-    caption:
-      "Glass lake between Glacier National Park and Yellowstone National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo4.jpg",
-    caption: "Watering hole at Yellowstone National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo5.jpg",
-    caption: "Yellowstone National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo6.jpg",
-    caption: "Rocky Mountain National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo7.jpg",
-    caption: "Rocky Mountain National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo3.jpg",
-    caption: "Zebra Slot Canyons. 2021",
-  },
-  {
-    src: "../images/photos/photo9.jpg",
-    caption: "Road to Canyonlands National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo8.jpg",
-    caption: "Bryce Canyon National Park Overview. 2021",
-  },
-  {
-    src: "../images/photos/photo10.jpg",
-    caption: "Bryce Canyon National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo11.jpg",
-    caption: "Bryce Canyon National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo12.jpg",
-    caption: "Top of Angel's Landing. 2021",
-  },
-  {
-    src: "../images/photos/photo13.jpg",
-    caption: "El Capitan, Yosemite National Park. 2021",
-  },
-  {
-    src: "../images/photos/photo14.jpg",
-    caption: "The First Sight of Kilimanjaro. 2023",
-  },
-  { src: "../images/photos/photo15.jpg", caption: "The Barranco Wall. 2023" },
-  { src: "../images/photos/photo16.jpg", caption: "Campsite 3. 2023" },
-  { src: "../images/photos/photo17.jpg", caption: "The Final Descent. 2024" },
-];
+const photoGrid = document.getElementById("photo-grid");
 
-let currentIndex = 0;
+if (photoGrid) {
+  photoGalleryImages.forEach(({ src, caption }) => {
+    const figure = document.createElement("figure");
 
-const imageElement = document.getElementById("slideshow-image");
-const captionElement = document.getElementById("slideshow-caption");
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = caption;
 
-function updateSlideshow() {
-  imageElement.src = images[currentIndex].src;
-  captionElement.textContent = images[currentIndex].caption;
+    const figcaption = document.createElement("figcaption");
+    figcaption.textContent = caption;
+
+    figure.appendChild(img);
+    figure.appendChild(figcaption);
+    photoGrid.appendChild(figure);
+  });
 }
-
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  updateSlideshow();
-});
-
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateSlideshow();
-});
-
-// Initialize slideshow
-updateSlideshow();
