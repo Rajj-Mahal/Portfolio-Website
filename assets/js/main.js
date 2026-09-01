@@ -160,3 +160,49 @@ if (photoGrid) {
     photoGrid.appendChild(figure);
   });
 }
+
+document.querySelectorAll('form[action*="formspree.io"]').forEach((form) => {
+  const status = form.querySelector(".form-status");
+  const submitButton = form.querySelector('input[type="submit"]');
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (status) {
+      status.textContent = "Sending...";
+      status.classList.remove("success", "error");
+    }
+    if (submitButton) submitButton.disabled = true;
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    })
+      .then((response) => {
+        if (response.ok) {
+          if (status) {
+            status.textContent = "Message sent — thanks for reaching out!";
+            status.classList.add("success");
+          }
+          form.reset();
+        } else {
+          if (status) {
+            status.textContent =
+              "Something went wrong. Please try again or email me directly.";
+            status.classList.add("error");
+          }
+        }
+      })
+      .catch(() => {
+        if (status) {
+          status.textContent =
+            "Something went wrong. Please try again or email me directly.";
+          status.classList.add("error");
+        }
+      })
+      .finally(() => {
+        if (submitButton) submitButton.disabled = false;
+      });
+  });
+});
