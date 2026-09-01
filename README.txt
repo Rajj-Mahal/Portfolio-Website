@@ -1,26 +1,40 @@
-Phantom by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Raj Patel - Portfolio Website
+rajpatel.dev-ish | github.com/Rajj-Mahal/Portfolio-Website
 
+This is the source for my personal portfolio site: a small static
+multi-page site covering who I am, what I build, and what I do outside
+of work.
 
-This is Phantom, a simple design built around a grid of large, colorful, semi-interactive
-image tiles (of which you can have as many or as few as you like). Makes use of some
-SVG and animation techniques I've been experimenting with on that other project of mine
-you may have heard about (https://carrd.co), and includes a handy generic page for whatever.
+Pages:
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+	index.html          Landing page / intro
+	about.html           About me
+	software.html        Software engineering projects
+	gamer.html            Gaming hobby page
+	photographer.html    Photography gallery - a hover-zoom grid of
+	                      travel photos with captions, driven by
+	                      assets/js/photos-data.js so new photos can
+	                      be added without touching any page markup
+	snake/snake.html     Playable Snake game
+	maintenance.html     Placeholder for pages still in progress
+	generic.html          Generic content page (from the template)
+	elements.html         Template style/UI reference page
 
-(* = not included)
+Structure:
 
-AJ
-aj@lkn.io | @ajlkn
+	assets/css/main.css        Site styles
+	assets/js/main.js           Site behavior (menu, photo grid rendering, etc.)
+	assets/js/photos-data.js    Photo gallery content (image paths + captions)
+	images/                     Site images, including images/photos for the gallery
 
+Built on top of "Phantom" by HTML5 UP (html5up.net), used under the
+CCA 3.0 license (html5up.net/license), and customized into this
+portfolio.
 
 Credits:
 
-	Demo Images:
-		Unsplash (unsplash.com)
+	Template:
+		Phantom by HTML5 UP (html5up.net | @ajlkn)
 
 	Icons:
 		Font Awesome (fontawesome.io)
