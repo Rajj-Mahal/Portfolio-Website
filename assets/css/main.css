@@ -3453,47 +3453,62 @@ h2 .projects {
 .games:hover img {
   filter: brightness(30%); /* Darkens the image */
 }
-.slideshow-container {
-  position: relative;
-  text-align: center;
-
-  width: 100%;
-  margin: auto;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#slideshow-image {
-  max-width: 70%;
-  max-height: 50%;
-  border-radius: 10px;
-  padding-top: 5%;
-}
-
-.slidecontrols {
-  margin-top: 10px;
-}
-
-#prev-btn {
-  margin-left: auto;
-}
-
-#next-btn {
-  margin-right: auto;
-}
-.slideshow-container {
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 1.5rem;
   width: 90%;
-  height: 80%;
-  overflow: hidden;
+  margin: 2rem auto;
 }
 
-#slideshow-image {
+.photo-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+.photo-grid img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: 220px;
   object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(2);
+  z-index: 10;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.photo-grid figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 980px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-grid img:hover {
+    transform: scale(1.4);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid img:hover {
+    transform: scale(1.1);
+  }
 }
 
 #slide {

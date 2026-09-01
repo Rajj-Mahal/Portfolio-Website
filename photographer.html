@@ -36,10 +36,10 @@
         <h2>Menu</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="maintainance.html">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="/images/Resume.pdf" download>Resume</a></li>
-          <li><a href="maintainance.html">Hobbies</a></li>
-          <li><a href="maintainance.html">Contact</a></li>
+          <li><a href="maintenance.html">Hobbies</a></li>
+          <li><a href="maintenance.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -49,26 +49,7 @@
           <h1>Photographer</h1>
           <h3 id="slide">Pictures are great...</h3>
           <p id="slide">But you really had to be there.</p>
-          <div class="slideshow-container">
-            <img
-              id="slideshow-image"
-              src="images/photos/photo2.jpg"
-              alt="Slideshow Image"
-            />
-            <p id="slideshow-caption" style="font-style: italic">
-              Caption for Image 1
-            </p>
-            <div class="slidecontrols">
-              <button class="button primary" id="prev-btn">Previous</button>
-              <button
-                class="button primary"
-                id="next-btn"
-                href="javascript:void(0);"
-              >
-                Next
-              </button>
-            </div>
-          </div>
+          <div class="photo-grid" id="photo-grid"></div>
         </div>
       </div>
 
@@ -107,23 +88,8 @@
             <h2>Follow</h2>
             <ul class="icons">
               <li>
-                <a href="#" class="icon brands style2 fa-twitter"
-                  ><span class="label">Twitter</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon brands style2 fa-facebook-f"
-                  ><span class="label">Facebook</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon brands style2 fa-instagram"
-                  ><span class="label">Instagram</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon brands style2 fa-dribbble"
-                  ><span class="label">Dribbble</span></a
+                <a href="#" class="icon brands style2 fa-linkedin-in"
+                  ><span class="label">LinkedIn</span></a
                 >
               </li>
               <li>
@@ -132,18 +98,13 @@
                 >
               </li>
               <li>
-                <a href="#" class="icon brands style2 fa-500px"
-                  ><span class="label">500px</span></a
+                <a href="#" class="icon brands style2 fa-instagram"
+                  ><span class="label">Instagram</span></a
                 >
               </li>
               <li>
-                <a href="#" class="icon solid style2 fa-phone"
-                  ><span class="label">Phone</span></a
-                >
-              </li>
-              <li>
-                <a href="#" class="icon solid style2 fa-envelope"
-                  ><span class="label">Email</span></a
+                <a href="#" class="icon brands style2 fa-facebook-f"
+                  ><span class="label">Facebook</span></a
                 >
               </li>
             </ul>
@@ -160,6 +121,7 @@
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
+    <script src="assets/js/photos-data.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
