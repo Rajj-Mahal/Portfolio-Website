@@ -2,6 +2,43 @@
   max-width: 100%;
 }
 
+.tracker-rules {
+  max-width: 42rem;
+  border: solid 1px #c8aa6e;
+  border-radius: 6px;
+  background: rgba(200, 170, 110, 0.08);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.tracker-rules h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #a07c2c;
+}
+
+.tracker-rules ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.tracker-rules li {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #585858;
+}
+
+.tracker-rules li:last-child {
+  margin-bottom: 0;
+}
+
+.tracker-title {
+  max-width: 36rem;
+}
+
 .tracker-toolbar {
   display: flex;
   flex-wrap: wrap;

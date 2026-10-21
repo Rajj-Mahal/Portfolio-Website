@@ -45,12 +45,42 @@
       <!-- Main -->
       <div id="main">
         <div class="inner">
-          <h1 class="projecttitle">League of Legends Tracker</h1>
-          <p>
-            Click any champion to cycle it through
-            <strong>Locked &rarr; Unlocked &rarr; Banned &rarr; Locked</strong>.
-            Your progress is saved automatically in this browser.
-          </p>
+          <section class="tracker-rules">
+            <h2>Rules</h2>
+            <ol>
+              <li>
+                <strong>Losing bans the champion.</strong> Lose a game and
+                that champion is banned. You can&rsquo;t play it again for the
+                rest of the run.
+              </li>
+              <li>
+                <strong>Unlock champions instead of picking them.</strong>
+                You start with 5 random unlocked champions (a random roll, an
+                ARAM reroll, or a spin of a wheel).
+              </li>
+              <li>
+                <strong>Only good wins unlock a new champion.</strong> You
+                unlock one new random champion after a win, but only if your
+                KDA was positive, meaning (kills + assists) &divide; deaths is
+                above 1. A win with a neutral or negative KDA unlocks nothing,
+                though the champion you played stays available.
+              </li>
+              <li>
+                <strong>The run ends when you have no unbanned champions
+                left.</strong> If every champion you&rsquo;ve unlocked is
+                banned, you&rsquo;ve failed.
+              </li>
+            </ol>
+          </section>
+
+          <div class="tracker-title">
+            <h1 class="projecttitle">League of Legends Tracker</h1>
+            <p>
+              Click any champion to cycle it through
+              <strong>Locked &rarr; Unlocked &rarr; Banned &rarr; Locked</strong>.
+              Your progress is saved automatically in this browser.
+            </p>
+          </div>
 
           <div class="tracker-legend">
             <span><span class="dot locked"></span> Locked</span>
