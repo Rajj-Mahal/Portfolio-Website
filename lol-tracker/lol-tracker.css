@@ -8,7 +8,7 @@
   border-radius: 6px;
   background: rgba(200, 170, 110, 0.08);
   padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0 2rem;
+  margin: 1.5rem auto 2rem;
 }
 
 .tracker-rules h2 {
@@ -37,6 +37,8 @@
 
 .tracker-title {
   max-width: 36rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .tracker-toolbar {
